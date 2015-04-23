@@ -1,0 +1,28 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'imager/normalize.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'imager/style.css' %}" />
+    <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.8/mapbox.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.8/mapbox.js'></script>
+    {% block stylesheets %}{% endblock %}
+    <title>{% block title %}Parks{% endblock %}</title>
+</head>
+
+<body>
+    <header>
+        <h2 id="headerTitle"><a href="{% url 'home' %}">Parks</a></h2>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="map">
+    </div>
+     <script>
+        L.mapbox.map('map', 'mapbox.streets')
+    </script>
+</body>
+</html>
