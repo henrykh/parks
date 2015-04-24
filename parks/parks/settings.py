@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'parks_geo'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -97,3 +98,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# Registration Settings
+ACCOUNT_ACTIVATION_DAYS = 7
