@@ -29,8 +29,6 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# Application definition
-
 INSTALLED_APPS = (
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,7 +36,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'parks_geo'
+    'registration'
 )
 
 MIDDLEWARE_CLASSES = (
@@ -78,7 +76,7 @@ WSGI_APPLICATION = 'parks.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default='postgres://{}:@localhost:5432/django_imager'.format(USER_NAME))
+        default='postgres://{}:@localhost:5432/parks'.format(USER_NAME))
     }
 
 
