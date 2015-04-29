@@ -2,8 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="{% static 'imager/normalize.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'imager/style.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'parks/normalize.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'parks/style.css' %}" />
     <link href='https://api.tiles.mapbox.com/mapbox.js/v2.1.8/mapbox.css' rel='stylesheet' />
     <script src='https://api.tiles.mapbox.com/mapbox.js/v2.1.8/mapbox.js'></script>
     {% block stylesheets %}{% endblock %}
@@ -23,7 +23,10 @@
     </div>
      <script>
         L.mapbox.accessToken = '{{ mapbox_access_token }}';
-        L.mapbox.map('map', 'henrykh.e252799e');
+        var map = L.mapbox.map('map', 'henrykh.e252799e');
+        var geojson = "{% static 'parks_geo/parks_geojson.json' %}";
+        var featureLayer = L.mapbox.featureLayer(geojson);
+        featureLayer.addTo(map);
     </script>
 </body>
 </html>

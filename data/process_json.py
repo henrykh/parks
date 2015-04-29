@@ -8,8 +8,8 @@ if __name__ == "__main__":
         for park in parks:
             park_geojson = {"type": "Feature",
                             "geometry": {"type": "Point",
-                                         "coordinates": "{}, {}".format(
-                                            park[12], park[13])},
+                                         "coordinates": [float(park[12]), float(park[13])]
+                                         },
                             "properties": {
                                 "name": park[9],
                                 "address": park[10],

@@ -1,7 +1,6 @@
 from django.db import models
+import os
 
-
-#TODO: Move this out of project and into its own app ?
 # What metadata should be added to the basic data?
 # Think about relationship between parks and users, users and comments/reviews 
 
