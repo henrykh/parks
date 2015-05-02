@@ -97,5 +97,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "parks/static/"),
+    )
+
 # Registration Settings
 ACCOUNT_ACTIVATION_DAYS = 7

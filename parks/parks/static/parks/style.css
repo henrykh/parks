@@ -1,0 +1,17 @@
+header {
+    background-color: #56b881;
+    height: 3em;
+}
+
+#headerTitle {
+    float: left;
+}
+
+#headerTitle a{
+    color: white;
+    text-decoration: none;
+}
+
+nav {
+    float: right;
+}
