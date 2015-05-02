@@ -23,7 +23,8 @@
     </div>
      <script>
         L.mapbox.accessToken = '{{ mapbox_access_token }}';
-        var map = L.mapbox.map('map', 'henrykh.e252799e');
+        var map = L.mapbox.map(
+            'map', 'henrykh.e252799e').setView([47.6097, -122.3331], 12);
         var geojson = "{% static 'parks_geo/parks_geojson.json' %}";
         var featureLayer = L.mapbox.featureLayer(geojson);
         featureLayer.addTo(map);
